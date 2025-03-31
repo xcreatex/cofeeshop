@@ -68,7 +68,7 @@ const Navbar = ({ onQuerySelect, onQuerySubmit }) => {
   }
 
   return (
-    <nav className="flex items-center justify-between bg-gradient-to-r from-coffee-dark to-coffee-medium py-4 px-6 md:px-8 text-white shadow-lg relative z-10">
+    <nav className="flex items-center justify-between bg-gradient-to-r from-coffee-dark to-coffee-medium py-4 px-6 md:px-8 text-black shadow-lg relative z-10">
       <div className="flex-1 max-w-xl mr-5">
         <form onSubmit={handleSubmit} className="flex gap-2">
           <input
@@ -80,7 +80,7 @@ const Navbar = ({ onQuerySelect, onQuerySubmit }) => {
           />
           <button
             type="submit"
-            className="bg-coffee-light text-coffee-dark py-3 px-5 rounded-full text-base font-semibold cursor-pointer transition-all hover:bg-coffee-medium hover:text-white hover:-translate-y-0.5 hover:shadow-md"
+            className="bg-amber-900 text-coffee-dark py-3 px-5 rounded-full text-base font-semibold cursor-pointer transition-all hover:bg-coffee-medium text-amber-600 hover:-translate-y-0.5 hover:shadow-md"
           >
             Submit
           </button>
@@ -97,11 +97,11 @@ const Navbar = ({ onQuerySelect, onQuerySubmit }) => {
           >
             <span className="flex items-center gap-1">{entity.name}</span>
             {activeDropdown === index && (
-              <div className="absolute top-full left-0 bg-white text-gray-800 rounded-lg shadow-lg w-max min-w-56 py-1 mt-1 z-20 animate-fadeIn">
+              <div className="absolute top-full left-0 bg-gray-500 text-gray-800 rounded-lg shadow-lg w-max min-w-56 py-1 mt-1 z-20 animate-fadeIn">
                 {entity.queries.map((query) => (
                   <div
                     key={query.key}
-                    className="py-3 px-4 cursor-pointer text-base transition-all hover:bg-coffee-light/20 hover:text-coffee-dark"
+                    className="py-3 px-4 cursor-pointer text-base transition-all bg-blue-400 hover:text-coffee-dark"
                     onClick={() => onQuerySelect(query.key)}
                   >
                     {query.text}

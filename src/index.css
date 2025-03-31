@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.will-change-transform {
+    will-change: opacity, transform;
+  }
+  
